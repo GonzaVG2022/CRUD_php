@@ -6,7 +6,7 @@ $getUsers = $user->getUser();
 ?>
 
 
-<table>
+<table class="table table-striped table-bordered">
     <tr>
         <th>Nombre</th>
         <th>Edad</th>
@@ -26,6 +26,6 @@ $getUsers = $user->getUser();
         <td><a href="deleteUser.php?id=<?php echo $getUsers[$i]['ID'];?>">Eliminar</a></td>
     </tr>
     <?php 
-} 
-?> 
+    } 
+    ?> 
 </table>

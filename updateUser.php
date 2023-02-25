@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>CRUD</title>
 </head>
 <body>
 <?php 
@@ -13,14 +15,18 @@ include('conect.php');
 $updeteUsers = $user->getIdUser($_GET['id']);
 
 ?>
-<form action="upUsers.php" method="POST">
+<form action="udateTable.php" method="POST">´
+<div class="col col-lg-2">
+  <input type="hidden" name="id" value="<?php echo $updeteUsers[0]['ID'];?>">
+  </div>
   <div class="col col-lg-2">
     <label for="nombre" class="form-label">Nombre</label>
     <input type="text" class="form-control" placeholder="Nombre" name="nombre" value="<?php echo $updeteUsers[0]['NOMBRE'];?>">
   </div>
   <div class="col col-lg-2">
     <label for="edad" class="form-label">Edad</label>
-    <input type="number" class="form-control" placeholder="Edad" name="edad" value="<?php echo $updeteUsers[0]['EDAD'];?>">
+    <input type="number" class="form-control" placeholder="Edad" name="edad" 
+    value="<?php echo $updeteUsers[0]['EDAD'];?>">
   </div>
   <div class="col col-lg-2">
   <label for="sexo" class="form-label">Sexo</label>
@@ -34,6 +40,8 @@ $updeteUsers = $user->getIdUser($_GET['id']);
     <input type="number" class="form-control" placeholder="Rolid" name="rolid" value="<?php echo $updeteUsers[0]['ROLID'];?>">
   </div>   
   <button type="submit" class="btn btn-primary">Submit</button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 </form>
 </body>
 </html>
