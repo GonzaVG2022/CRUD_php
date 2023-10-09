@@ -1,5 +1,7 @@
 /* Aplica estilos al contenedor principal del formulario */
+
 form {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,11 +18,12 @@ form {
     margin-bottom: 10px;
     width: 100%;
   }
+
   
   /* Estilos para las etiquetas de los input */
   label {
     font-weight: bold;
-  }
+   }
   
   /* Estilos para el botón de enviar */
   button[type="submit"] {
@@ -33,6 +36,7 @@ form {
     cursor: pointer;
 
   }
+
   
   /* Estilos para el mensaje de éxito */
   

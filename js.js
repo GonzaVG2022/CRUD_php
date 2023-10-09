@@ -26,3 +26,8 @@ if (window.location.search.includes('ok_user')) {
       successMessage.style.display = 'none';
     }, 5000); // Oculta el mensaje después de 5 segundos
   }
+
+  // grafic
+  
+    
+  
